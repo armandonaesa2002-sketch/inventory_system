@@ -1,0 +1,51 @@
+Recommended Workflow: Local Folder → GitHub Repo
+
+
+
+1️⃣ Create your project locally first
+Example:
+C:\xampp\htdocs\project\Inventory_system
+Build your project normally (code, files, etc.)
+2️⃣ Go to GitHub and create a new repo
+Don’t initialize with README, .gitignore, or license kung gusto mo smooth upload.
+Copy the repo URL, e.g.:
+https://github.com/armandonaesa2002-sketch/inventory_system.git
+3️⃣ Initialize Git in your local folder
+
+Open terminal sa VS Code, folder path should already be:
+
+PS C:\xampp\htdocs\project\Inventory_system>
+
+Then:
+
+git init
+git add .
+git commit -m "Initial commit"
+4️⃣ Link your local repo to GitHub
+git remote add origin https://github.com/armandonaesa2002-sketch/inventory_system.git
+5️⃣ Push to GitHub
+
+Since your GitHub repo is empty, you can safely do:
+
+git branch -M main
+git push -u origin main
+
+✅ Your project is now on GitHub.
+
+Optional: If GitHub repo has README already
+Do this before push:
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+Or, force push if you don’t care about the README:
+git push -u origin main --force
+6️⃣ Next time you update your project
+
+Just run:
+
+git add .
+git commit -m "Some message"
+git push
+
+No need to redo git init or git remote add again.
+
+💡 Tip: Always create .gitignore first to ignore unnecessary files (e.g., node_modules, .env, build files).
